@@ -5,28 +5,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ALETHEIA — the diagnostic wing</title>
 <meta name="description" content="The diagnostic wing of the Kingdom. The empirical case against the Great Lie. This wing faces inward.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&display=swap" rel="stylesheet">
 <style>
+  @font-face {
+    font-family: "Fraunces";
+    src: url("fonts/Fraunces.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Newsreader";
+    src: url("fonts/Newsreader.ttf") format("truetype");
+    font-weight: 200 800;
+    font-style: normal;
+    font-display: swap;
+  }
   :root {
     --paper: #f4f1ea; --ink: #16181d; --dim: #6c675c;
     --thread: #b3322e; --line: #d8d2c4;
+    --serif-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+    --serif-body: "Newsreader", "Iowan Old Style", Georgia, serif;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html, body { height: 100%; }
   body {
     background: var(--paper); color: var(--ink);
-    font-family: "Newsreader", georgia, serif;
+    font-family: var(--serif-body);
     display: grid; place-items: center; text-align: center; padding: 4rem 1.5rem;
   }
   main { max-width: 40rem; }
-  .ghost { font-family: "Fraunces", serif; font-weight: 300; font-size: clamp(3rem, 9vw, 5rem);
+  .ghost { font-family: var(--serif-display); font-weight: 300; font-size: clamp(3rem, 9vw, 5rem);
     color: transparent; -webkit-text-stroke: 1px #c9c2b2; letter-spacing: .12em;
     user-select: none; }
-  .kicker { font-family: "Fraunces", serif; font-size: .72rem; letter-spacing: .34em;
+  .kicker { font-family: var(--serif-display); font-size: .72rem; letter-spacing: .34em;
     text-transform: uppercase; color: var(--thread); margin: 1.6rem 0 1.1rem; }
-  h1 { font-family: "Fraunces", serif; font-weight: 560;
+  h1 { font-family: var(--serif-display); font-weight: 560;
     font-size: clamp(2.4rem, 7.5vw, 3.8rem); letter-spacing: .2em; margin-bottom: 1.4rem;
     padding-left: .2em; /* optical balance for letterspacing */ }
   .epithet { font-size: 1.18rem; font-style: italic; color: var(--dim); line-height: 1.65; }
